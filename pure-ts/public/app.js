@@ -1,15 +1,16 @@
-var character = "Rakaa";
+"use strict";
+const character = "Rakaa";
 console.log(character);
-var inputs = document.querySelectorAll("input");
-inputs.forEach(function (input) {
+const inputs = document.querySelectorAll("input");
+inputs.forEach((input) => {
     console.log(input);
 });
 // Basic Types
-var ac = "Raj"; // Type inference feature allow to define type without explicitely defining it!
-var age = 21;
-var isMale = true;
+let ac = "Raj"; // Type inference feature allow to define type without explicitely defining it!
+let age = 21;
+let isMale = true;
 // isMale = "yes";  Type 'string' is not assignable to type 'boolean'
-var eligible = null;
+let eligible = null;
 // eligible = "not valid"; since it type defined is null, it doesn't make any sence to assign something to it!
 function sum(a, b) {
     // Union type makes it possible for variables to have more than one type eg. number | string
@@ -18,17 +19,17 @@ function sum(a, b) {
 }
 console.log(sum("2", 9)); // 29
 // Arrays & Objects
-var players = ["Rohit Sharma", "Johnny Bairstow", "Ben Stokes"];
+let players = ["Rohit Sharma", "Johnny Bairstow", "Ben Stokes"];
 // players.push(29);
 players.push("Rishabh Pant");
 console.log(players);
-var mixedArray = ["Rohit Sharma", 45, "Ben Stokes", 99];
+let mixedArray = ["Rohit Sharma", 45, "Ben Stokes", 99];
 mixedArray.push(67);
 // mixedArray.push(false); error
-var MI = {
+let MI = {
     id: 1,
     name: "Jofra Archer",
-    isForeiner: true
+    isForeiner: true,
 };
 // Valid
 // MI = {
@@ -44,20 +45,20 @@ var MI = {
 //   age: 28,
 // };
 // Explicit Types
-var microsoft;
+let microsoft;
 microsoft = "best";
-var PBKS;
+let PBKS;
 PBKS = {
     player1: "Sam Curran",
     player2: "Bhajuka Rajpaksha",
-    IplWon: 0
+    IplWon: 0,
 };
-var IplTeams = []; // contains only string
+let IplTeams = []; // contains only string
 IplTeams.push("MI");
 // IplTeams.push(false); error
 // Union Types
-var bblTeams = []; // contains only string & numbers
+let bblTeams = []; // contains only string & numbers
 bblTeams.push("MI");
 bblTeams.push(15);
-var Meta;
+let Meta;
 Meta = true;

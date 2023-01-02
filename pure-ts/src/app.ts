@@ -18,7 +18,7 @@ let isMale = true;
 let eligible = null;
 // eligible = "not valid"; since it type defined is null, it doesn't make any sence to assign something to it!
 
-function sum(a, b: number): number | string {
+function sum(a: any, b: number): number | string {
   // Union type makes it possible for variables to have more than one type eg. number | string
   // TypeScript has a default type any. when you don't explicitely define types then TS implicitely set type to any.
   return a + b;
