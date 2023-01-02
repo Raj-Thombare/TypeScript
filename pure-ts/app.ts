@@ -59,3 +59,32 @@ let MI = {
 //   isForeiner: false,
 //   age: 28,
 // };
+
+// Explicit Types
+
+let microsoft: string;
+microsoft = "best";
+
+let PBKS: {
+  player1: string;
+  player2: string;
+  IplWon: number;
+};
+
+PBKS = {
+  player1: "Sam Curran",
+  player2: "Bhajuka Rajpaksha",
+  IplWon: 0,
+};
+
+let IplTeams: string[] = []; // contains only string
+IplTeams.push("MI");
+// IplTeams.push(false); error
+
+// Union Types
+let bblTeams: (string | number)[] = []; // contains only string & numbers
+bblTeams.push("MI");
+bblTeams.push(15);
+
+let Meta: string | number | boolean;
+Meta = true;

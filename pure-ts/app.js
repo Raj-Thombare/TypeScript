@@ -43,3 +43,21 @@ var MI = {
 //   isForeiner: false,
 //   age: 28,
 // };
+// Explicit Types
+var microsoft;
+microsoft = "best";
+var PBKS;
+PBKS = {
+    player1: "Sam Curran",
+    player2: "Bhajuka Rajpaksha",
+    IplWon: 0
+};
+var IplTeams = []; // contains only string
+IplTeams.push("MI");
+// IplTeams.push(false); error
+// Union Types
+var bblTeams = []; // contains only string & numbers
+bblTeams.push("MI");
+bblTeams.push(15);
+var Meta;
+Meta = true;
