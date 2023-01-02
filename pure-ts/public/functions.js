@@ -25,3 +25,16 @@ let person2 = (name, age) => {
 };
 console.log(person1({ personName: "Rakaa", isMale: true }, 21));
 console.log(person2({ personName: "Kaira", isMale: false }, 20));
+// Function Signature
+//eg.1
+let greet; // strictly follow this function signature
+greet = (a, b) => {
+    console.log(`${a} says ${b}`);
+};
+greet("Rolex", "Alright, it's alright!");
+//eg.2
+let whoIsBig;
+whoIsBig = (a, b) => {
+    return a > b;
+};
+whoIsBig(5, 9);
