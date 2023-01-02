@@ -17,3 +17,29 @@ function sum(a, b) {
     return a + b;
 }
 console.log(sum("2", 9)); // 29
+// Arrays & Objects
+var players = ["Rohit Sharma", "Johnny Bairstow", "Ben Stokes"];
+// players.push(29);
+players.push("Rishabh Pant");
+console.log(players);
+var mixedArray = ["Rohit Sharma", 45, "Ben Stokes", 99];
+mixedArray.push(67);
+// mixedArray.push(false); error
+var MI = {
+    id: 1,
+    name: "Jofra Archer",
+    isForeiner: true
+};
+// Valid
+// MI = {
+//   id: 22,
+//   name: "Shreyas Iyer",
+//   isForeiner: false,
+// };
+// Invalid cause can't update the structure of MI object
+// MI = {
+//   id: 22,
+//   name: "Shreyas Iyer",
+//   isForeiner: false,
+//   age: 28,
+// };
