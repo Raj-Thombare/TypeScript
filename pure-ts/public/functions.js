@@ -17,3 +17,11 @@ let maru = (a, b, c = "Dhamdhere") => {
     return `${a}'s name is ${b} ${c}`;
 };
 console.log(maru("Maru", "Martand"));
+let person1 = (name, age) => {
+    return `${name.personName} is a ${name.isMale ? "male" : "female"} and ${name.isMale ? "his" : "her"} age is ${age}`;
+};
+let person2 = (name, age) => {
+    return `${name.personName} is a ${name.isMale ? "male" : "female"} and ${name.isMale ? "his" : "her"} age is ${age}`;
+};
+console.log(person1({ personName: "Rakaa", isMale: true }, 21));
+console.log(person2({ personName: "Kaira", isMale: false }, 20));

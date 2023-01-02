@@ -24,3 +24,26 @@ let maru = (a: string, b: string, c: string = "Dhamdhere") => {
 };
 
 console.log(maru("Maru", "Martand"));
+
+// Type Alias
+
+type StringOrNum = string | number;
+type personObj = {
+  personName: string;
+  isMale: boolean;
+};
+
+let person1 = (name: personObj, age: StringOrNum) => {
+  return `${name.personName} is a ${name.isMale ? "male" : "female"} and ${
+    name.isMale ? "his" : "her"
+  } age is ${age}`;
+};
+
+let person2 = (name: personObj, age: StringOrNum) => {
+  return `${name.personName} is a ${name.isMale ? "male" : "female"} and ${
+    name.isMale ? "his" : "her"
+  } age is ${age}`;
+};
+
+console.log(person1({ personName: "Rakaa", isMale: true }, 21));
+console.log(person2({ personName: "Kaira", isMale: false }, 20));
