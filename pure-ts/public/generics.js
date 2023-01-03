@@ -17,7 +17,9 @@ const logArray = (c) => {
 };
 logArray(["Maru"]); // cannot accept param other than array.
 // above functions are not dynamic in terms of accepting different type of args, they have specific defined type and are limited! Generics come handy here:
-// Generics allow us reusable blocks of code which can be used with different types
+// Generics allow us reusable blocks of code which can be used with different types.
+// Generics makes it easier to write reusable code.
+// We dont need to explicitly define types
 // below function is dynamic in termas of passing different types of args cause when using Generics, it infers the arg type based on value of arg passed!
 let logAnything = (x) => {
     console.log(x);
@@ -41,4 +43,6 @@ let addUid2 = (obj) => {
 };
 const egTwo = addUid2({ name: "Hasaranga", age: 28 });
 console.log(egTwo.name); // works cause when using Generics, it will know what kind of props are on obj
-// const egThree = addUid2("Hello"); // if you want to define specific type that accepts as arg then use extends
+const databaseValue = { value: "2" };
+const databaseValue2 = { value: 2 };
+const databaseValue3 = { value: true };
