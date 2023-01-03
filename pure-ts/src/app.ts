@@ -25,7 +25,7 @@ form.addEventListener("submit", (e: Event) => {
   console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
 });
 
-// interfaces
+// interfaces - used to define object types
 
 interface User {
   name: string;
