@@ -1,4 +1,5 @@
 "use strict";
+// Example 1
 // Suppose you want to make a function that logs every type of value!
 const logObject = (a) => {
     console.log(a);
@@ -26,3 +27,18 @@ logAnything("Hello");
 logAnything(true);
 logAnything([99, 45, 8]);
 logAnything({ username: "im.rakaa" });
+// Example 2
+let addUid = (obj) => {
+    let id = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { id });
+};
+const egOne = addUid({ name: "Hasaranga", age: 28 });
+console.log(egOne); //works but if you access prop of obj that is passed it gives error cause it doesn't know what props does that obj contain
+// console.log(egOne.name); error
+let addUid2 = (obj) => {
+    let id = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { id });
+};
+const egTwo = addUid2({ name: "Hasaranga", age: 28 });
+console.log(egTwo.name); // works cause when using Generics, it will know what kind of props are on obj
+// const egThree = addUid2("Hello"); // if you want to define specific type that accepts as arg then use extends
