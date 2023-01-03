@@ -20,6 +20,8 @@ logArray(["Maru"]); // cannot accept param other than array.
 
 // above functions are not dynamic in terms of accepting different type of args, they have specific defined type and are limited! Generics come handy here:
 
+// Generics allow us reusable blocks of code which can be used with different types
+
 // below function is dynamic in termas of passing different types of args cause when using Generics, it infers the arg type based on value of arg passed!
 
 let logAnything = <T>(x: T): T => {
@@ -28,3 +30,6 @@ let logAnything = <T>(x: T): T => {
 };
 
 logAnything("Hello");
+logAnything(true);
+logAnything([99, 45, 8]);
+logAnything({ username: "im.rakaa" });
