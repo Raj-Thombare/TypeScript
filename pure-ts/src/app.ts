@@ -24,3 +24,38 @@ form.addEventListener("submit", (e: Event) => {
 
   console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
 });
+
+// interfaces
+
+interface User {
+  name: string;
+  age: number;
+  speak(a: string): void;
+  spend(a: number): number;
+}
+
+let me: User = {
+  name: "Rakaa",
+  age: 21,
+  speak(text: string): void {
+    console.log(text);
+  },
+  spend(amount: number): number {
+    return amount;
+  },
+};
+
+let notMe = {
+  name: "Rolex",
+  age: 21,
+};
+
+console.log(me);
+
+let greetPerson = (person: User) => {
+  console.log("Hello, " + person.name);
+};
+
+greetPerson(me);
+
+// greetPerson(notMe); error

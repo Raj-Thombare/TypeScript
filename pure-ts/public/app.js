@@ -17,3 +17,23 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
 });
+let me = {
+    name: "Rakaa",
+    age: 21,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        return amount;
+    },
+};
+let notMe = {
+    name: "Rolex",
+    age: 21,
+};
+console.log(me);
+let greetPerson = (person) => {
+    console.log("Hello, " + person.name);
+};
+greetPerson(me);
+// greetPerson(notMe); error
