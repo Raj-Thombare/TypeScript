@@ -61,3 +61,15 @@ const MumbaiPlayers = [
 getYoungestPlayer(MumbaiPlayers); // can access age but name cannot
 const player1 = getYoungestPlayer(MumbaiPlayers);
 player1.name; // works with Generics
+let resource1 = {
+    id: 1,
+    resourceName: "person",
+    data: { name: "Travis" },
+}; // can access all the props
+console.log(resource1.data); // travis
+let resource2 = {
+    id: 1,
+    resourceName: "shopping list",
+    data: ["milk", "eggs", "bananas"],
+};
+console.log(resource2.data[1]); // eggs

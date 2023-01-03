@@ -68,7 +68,7 @@ const databaseValue: Database<string> = { value: "2" };
 const databaseValue2: Database<number> = { value: 2 };
 const databaseValue3: Database<boolean> = { value: true };
 
-// Generics with interfaces
+// Generics with interfaces - 2 eg
 // Example 4
 
 interface PlayerAge {
@@ -99,3 +99,27 @@ const MumbaiPlayers: MumbaiPlayer[] = [
 getYoungestPlayer(MumbaiPlayers); // can access age but name cannot
 const player1 = getYoungestPlayer(MumbaiPlayers);
 player1.name; // works with Generics
+
+// Example 5
+
+interface Resource<T> {
+  id: number;
+  resourceName: string;
+  data: T;
+}
+
+let resource1: Resource<object> = {
+  id: 1,
+  resourceName: "person",
+  data: { name: "Travis" },
+}; // can access all the props
+
+console.log(resource1.data); // travis
+
+let resource2: Resource<string[]> = {
+  id: 1,
+  resourceName: "shopping list",
+  data: ["milk", "eggs", "bananas"],
+};
+
+console.log(resource2.data[1]); // eggs
