@@ -46,3 +46,18 @@ console.log(egTwo.name); // works cause when using Generics, it will know what k
 const databaseValue = { value: "2" };
 const databaseValue2 = { value: 2 };
 const databaseValue3 = { value: true };
+// generic constraints(extends) - compiler doesn't know that every obj will have .age property so it gives error,
+// so we constraint in by extending it to PlayerAge so that whenever an obj doent have age prop then it will not give error and when a obj has age prop it will work
+const getYoungestPlayer = (arg) => {
+    return arg.sort((a, b) => a.age - b.age)[0];
+};
+const player = [{ age: 20 }, { age: 23 }, { age: 19 }];
+getYoungestPlayer(player).age; // 19
+const MumbaiPlayers = [
+    { name: "Rohit", age: 35 },
+    { name: "Tilak", age: 20 },
+    { name: "Brevis", age: 19 },
+];
+getYoungestPlayer(MumbaiPlayers); // can access age but name cannot
+const player1 = getYoungestPlayer(MumbaiPlayers);
+player1.name; // works with Generics
